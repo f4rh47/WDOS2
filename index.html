@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="delivery-banner">
+            <p class="top">&#x1F550; We are open 24/7 &#65372; &#9743; Need Help? Call us:<a href="tel:+94714987397">+94 714987397</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61559653757620"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/farmtofreshgrocery/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="container nav">
+            <img src="Images/logo1.png" alt="Farm to Fresh Grocery Logo">
+            <h1>Farm to Fresh Grocery</h1>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Products &#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="C:\Users\FARHAT\Desktop\docs\vegetable\vegetable.html">Vegetables</a>
+                            <a href="C:\Users\FARHAT\Desktop\docs\dairy\dairy.html">Dairy Products</a>
+                            <a href="C:\Users\FARHAT\Desktop\docs\cosmetics\cosmetics.html">Cosmetics</a>
+                        </div>
+                    </li>
+                    <li><a href="./index.html">Product Order Page</a></li>
+                    <li><a href="./order.html">Order Page</a></li>
+                    <li><a href="C:\Users\FARHAT\Desktop\docs\loyalty\loyalty.html">Loyalty Registration</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form id="orderForm">
+            <section>
+                <h2>Fruits</h2>
+                <div class="items-container">
+                    <div class="item">
+                        <img src="Images/apples.jpg" alt="Apple">
+                        <label for="apple">Apple (quantity):</label>
+                        <span class="price">Rs.1500/kg</span>
+                        <input type="number" id="apple" name="fruits[apple]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Apple" data-price="1500">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="Images/bananas.png" alt="Bananas">
+                        <label for="bananas">Bananas (quantity):</label>
+                        <span class="price">Rs.800/kg</span>
+                        <input type="number" id="bananas" name="fruits[bananas]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Bananas" data-price="800">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="Images/orange.png" alt="Oranges">
+                        <label for="oranges">Oranges (quantity):</label>
+                        <span class="price">Rs.1600/kg</span>
+                        <input type="number" id="oranges" name="fruits[oranges]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Oranges" data-price="1600">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="Images/pineapple.png" alt="Pineapple">
+                        <label for="pineapple">Pineapple (quantity):</label>
+                        <span class="price">Rs.900/kg</span>
+                        <input type="number" id="pineapple" name="fruits[pineapple]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Pineapple" data-price="900">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="Images/mango.png" alt="Mango">
+                        <label for="mango">Mango (quantity):</label>
+                        <span class="price">Rs.700/kg</span>
+                        <input type="number" id="mango" name="fruits[mango]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Mango" data-price="700">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/strawberry.png" alt="Strawberry">
+                        <label for="strawberry">Strawberry (quantity):</label>
+                        <span class="price">Rs.500/kg</span>
+                        <input type="number" id="strawberry" name="fruits[strawberry]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Strawberry" data-price="500">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Vegetables</h2>
+                <div class="items-container">
+                    <div class="item">
+                        <img src="images/carrot.png" alt="Carrots">
+                        <label for="carrots">Carrots (quantity):</label>
+                        <span class="price">Rs.450/kg</span>
+                        <input type="number" id="carrots" name="vegetables[carrots]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Carrots" data-price="450">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/broccoli.jpg" alt="Broccoli">
+                        <label for="broccoli">Broccoli (quantity):</label>
+                        <span class="price">Rs.5000/kg</span>
+                        <input type="number" id="broccoli" name="vegetables[broccoli]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Broccoli" data-price="5000">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/brinjal.png" alt="Brinjal">
+                        <label for="brinjal">Brinjal (quantity):</label>
+                        <span class="price">Rs.400/kg</span>
+                        <input type="number" id="brinjal" name="vegetables[brinjal]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Brinjal" data-price="400">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/gaarlic.png" alt="Garlic">
+                        <label for="garlic">Garlic (quantity):</label>
+                        <span class="price">Rs.600/kg</span>
+                        <input type="number" id="garlic" name="vegetables[garlic]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Garlic" data-price="600">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/potatoes.png" alt="Potato">
+                        <label for="potato">Potato (quantity):</label>
+                        <span class="price">Rs.540/kg</span>
+                        <input type="number" id="potato" name="vegetables[potato]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Potato" data-price="540">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/fresh-beans.png" alt="Beans">
+                        <label for="beans">Beans (quantity):</label>
+                        <span class="price">Rs.900/kg</span>
+                        <input type="number" id="beans" name="vegetables[beans]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Beans" data-price="900">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Dairy Products</h2>
+                <div class="items-container">
+                    <div class="item">
+                        <img src="Images/milk.png" alt="Milk">
+                        <label for="milk">Milk (quantity):</label>
+                        <span class="price">Rs.400</span>
+                        <input type="number" id="milk" name="dairy[milk]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Milk" data-price="400">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/cheese.png" alt="Cheese">
+                        <label for="cheese">Cheese (quantity):</label>
+                        <span class="price">Rs.1500</span>
+                        <input type="number" id="cheese" name="dairy[cheese]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Cheese" data-price="1500">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/yoghurt.jpg" alt="Yoghurt">
+                        <label for="yoghurt">Yoghurt (quantity):</label>
+                        <span class="price">Rs.120</span>
+                        <input type="number" id="yoghurt" name="dairy[yoghurt]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Yoghurt" data-price="120">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/flavoured milk.jpeg" alt="Flavored Milk">
+                        <label for="flavored-milk">Flavored Milk (quantity):</label>
+                        <span class="price">Rs.150</span>
+                        <input type="number" id="flavored-milk" name="dairy[flavored-milk]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Flavored Milk" data-price="150">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/butter.png" alt="Butter">
+                        <label for="butter">Butter (quantity):</label>
+                        <span class="price">Rs.600</span>
+                        <input type="number" id="butter" name="dairy[butter]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Butter" data-price="600">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/milk powder.jpeg" alt="Milk Powder">
+                        <label for="milk-powder">Milk Powder (quantity):</label>
+                        <span class="price">Rs.2500/kg</span>
+                        <input type="number" id="milk-powder" name="dairy[milk-powder]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Milk Powder" data-price="2500">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Meat</h2>
+                <div class="items-container">
+                    <div class="item">
+                        <img src="images/chicken.png" alt="Chicken">
+                        <label for="chicken">Chicken (quantity):</label>
+                        <span class="price">Rs.1100/kg</span>
+                        <input type="number" id="chicken" name="meat[chicken]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Chicken" data-price="1100">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/beef.png" alt="Beef">
+                        <label for="beef">Beef (quantity):</label>
+                        <span class="price">Rs.1500/kg</span>
+                        <input type="number" id="beef" name="meat[beef]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Beef" data-price="2500">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/mutton.png" alt="Mutton">
+                        <label for="mutton">Mutton (quantity):</label>
+                        <span class="price">Rs.5000/kg</span>
+                        <input type="number" id="mutton" name="meat[mutton]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Mutton" data-price="5000">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/prawns.png" alt="Prawns">
+                        <label for="prawns">Prawns (quantity):</label>
+                        <span class="price">Rs.1700/kg</span>
+                        <input type="number" id="prawns" name="meat[prawns]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Prawns" data-price="1700">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/cuttlefish.png" alt="Cuttlefish">
+                        <label for="cuttlefish">Cuttlefish (quantity):</label>
+                        <span class="price">Rs.2700/kg</span>
+                        <input type="number" id="cuttlefish" name="meat[cuttlefish]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Cuttlefish" data-price="2700">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Baking and Cooking Products</h2>
+                <div class="items-container">
+                    <div class="item">
+                        <img src="images/flour.png" alt="Flour">
+                        <label for="flour">Flour (quantity):</label>
+                        <span class="price">Rs.500/kg</span>
+                        <input type="number" id="flour" name="baking[flour]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Flour" data-price="500">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/sugar.png" alt="Sugar">
+                        <label for="sugar">Sugar (quantity):</label>
+                        <span class="price">Rs.400/kg</span>
+                        <input type="number" id="sugar" name="baking[sugar]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Sugar" data-price="400">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/baking powder.jpeg" alt="Baking Powder">
+                        <label for="baking-powder">Baking Powder (quantity):</label>
+                        <span class="price">Rs.380/kg</span>
+                        <input type="number" id="baking-powder" name="baking[baking-powder]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Baking Powder" data-price="380">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/vanilla essence.jpg" alt="Vanilla Essence">
+                        <label for="vanilla-essence">Vanilla Essence (quantity):</label>
+                        <span class="price">Rs.200</span>
+                        <input type="number" id="vanilla-essence" name="baking[vanilla-essence]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Vanilla Essence" data-price="200">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/bread.png" alt="Bread">
+                        <label for="bread">Bread (quantity):</label>
+                        <span class="price">Rs.300</span>
+                        <input type="number" id="bread" name="baking[bread]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Bread" data-price="300">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/cookies.png" alt="Cookies">
+                        <label for="cookies">Cookies (quantity):</label>
+                        <span class="price">Rs.320</span>
+                        <input type="number" id="cookies" name="baking[cookies]" min="0" step="1">
+                        <button type="button" class="add-to-cart" data-item="Cookies" data-price="320">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <h2>Order Summary</h2>
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total:</td>
+                        <td id="totalPrice">Rs.0</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="buttons">
+                <button type="button" id="buyNow">Buy Now</button>
+                <button type="button" id="addToFavourites">Add to Favourites</button>
+                <button type="button" id="applyFavourites">Apply Favourites</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61559653757620"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/farmtofreshgrocery/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../loyalty/loyalty.html">Loyalty</a></li>
+                    <li><a href="./order.html">Order Page</a></li>
+                    <li><a href="../about/about.html">About us</a></li>
+                </ul>
+            </div>  
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Farm to Fresh Grocery</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="delivery-banner">
+            <p class="top">&#x1F550; We are open 24/7 &#65372; &#9743; Need Help? Call us:<a href="tel:+94714987397">+94 714987397</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61559653757620"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/farmtofreshgrocery/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="container nav">
+            <img src="./Images/logo1.png" alt="Farm to Fresh Grocery Logo">
+            <h1>Farm to Fresh Grocery</h1>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Products &#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="../vegetable/vegetable.html">Vegetables</a>
+                            <a href="../dairy/dairy.html">Dairy Products</a>
+                            <a href="../cosmetics/cosmetics.html">Cosmetics</a>
+                        </div>
+                    </li>
+                    <li><a href="./index.html">Product Order Page</a></li>
+                    <li><a href="./order.html">Order Page</a></li>
+                    <li><a href="../loyalty/loyalty.html">Loyalty Registration</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="blur" id="order-form">
+            <div class="container">
+                <h2>Place Your Order</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="product">Product:</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select Product</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="dairy">Dairy Products</option>
+                            <option value="cosmetics">Cosmetics</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="card">Card</option>
+                            <option value="cash">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61559653757620"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/farmtofreshgrocery/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../loyalty/loyalty.html">Loyalty</a></li>
+                    <li><a href="../order/order.html">Order Page</a></li>
+                    <li><a href="../about/about.html">About us</a></li>
+                </ul>
+            </div>  
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Farm to Fresh Grocery</p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

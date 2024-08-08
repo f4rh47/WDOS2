@@ -1,0 +1,328 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(black\ and\ white.jpg);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Top of the page banner */
+.delivery-banner {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.top {
+    margin-right: auto;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+@media (max-width: 625px) {
+    .top {
+        display: none;
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Adjust font size for mobile */
+        margin-left: 5px; /* Adjust margin for mobile */
+        align-items: end;
+    }
+}
+/* Top of the page banner ends here */
+
+/* Header styles start here */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    position: relative;
+}
+
+header img {
+    height: 50px; /* Adjust height as per your logo dimensions */
+    margin-right: 10px; /* Add some spacing between logo and h1 */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+@media (max-width: 704px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #333;
+    }
+
+    .dropdown-content a {
+        color: white;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #444;
+    }
+}
+
+/* Header styles ends here */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+.social a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.social a:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+.social a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-nav{
+    margin: 30px 0;
+}
+
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom{
+    color: white;
+    background-color: black;
+    line-height: 50px;
+}
+
+@media (max-width:700px) {
+    .footer-nav ul{
+        flex-direction: column;
+    }
+
+    .footer-nav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
