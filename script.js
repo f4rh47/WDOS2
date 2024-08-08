@@ -60,43 +60,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function addItemToCart(item, quantity, price) {
-        const existingRow = [...orderTableBody.rows].find(row => row.cells[0].textContent === item);
-
+        const normalizedItem = item.toLowerCase().replace(/\s+/g, '-');
+        const existingRow = [...orderTableBody.rows].find(row => row.cells[0].textContent === normalizedItem);
+    
         if (existingRow) {
             const quantityCell = existingRow.cells[1];
             const priceCell = existingRow.cells[2];
-
+    
             const existingQuantity = parseFloat(quantityCell.textContent);
             const newQuantity = existingQuantity + quantity;
             quantityCell.textContent = newQuantity.toFixed(2);
-
+    
             const existingPrice = parseFloat(priceCell.textContent.replace('Rs.', ''));
             const newPrice = existingPrice + (quantity * price);
             priceCell.textContent = `Rs.${newPrice.toFixed(2)}`;
         } else {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${item}</td>
+                <td>${normalizedItem}</td>
                 <td>${quantity}</td>
                 <td class="item-price">Rs.${(quantity * price).toFixed(2)}</td>
             `;
             orderTableBody.appendChild(row);
         }
-
+    
         calculateTotal();
-        alert(`${quantity} ${item} added to the cart.`);
-    }
-
-    function handleOrderFormSubmit() {
-        orderTableBody.innerHTML = '';
-        const formData = new FormData(orderForm);
-        formData.forEach((value, key) => {
-            if (value > 0) {
-                const item = key.split('[')[1].split(']')[0];
-                addItemToCart(item, value, prices[item]);
-            }
-        });
-        alert('Order submitted successfully!');
     }
 
     function saveToFavourites() {
@@ -104,33 +92,36 @@ document.addEventListener('DOMContentLoaded', function() {
         orderTableBody.querySelectorAll('tr').forEach(row => {
             const item = row.children[0].textContent;
             const quantity = row.children[1].textContent;
-            items.push({ item, quantity });
+            // Normalize item name
+            const normalizedItem = item.toLowerCase().replace(/\s+/g, '-');
+            items.push({ item: normalizedItem, quantity });
         });
         localStorage.setItem('favourites', JSON.stringify(items));
         alert('Order saved to favourites!');
     }
-    
+
 
     function applyFavourites() {
-        const items = JSON.parse(localStorage.getItem('favourites'));
-        if (items) {
-            orderTableBody.innerHTML = '';
-            items.forEach(({ item, quantity }) => {
-                const normalizedItem = item.toLowerCase().replace(/\s+/g, '-');
-                if (prices[normalizedItem] !== undefined) {
-                    addItemToCart(normalizedItem, parseFloat(quantity), prices[normalizedItem]);
-                } else {
-                    console.error(`Price for item "${item}" not found`);
-                }
-            });
-            alert('Favourite order applied!');
-        } else {
-            alert('No favourite order found!');
-        }
+    const items = JSON.parse(localStorage.getItem('favourites'));
+    if (items) {
+        orderTableBody.innerHTML = '';
+        items.forEach(({ item, quantity }) => {
+            const normalizedItem = item.toLowerCase().replace(/\s+/g, '-');
+            if (prices[normalizedItem] !== undefined) {
+                addItemToCart(normalizedItem, parseFloat(quantity), prices[normalizedItem]);
+            } else {
+                console.error(`Price for item "${item}" not found`);
+            }
+        });
+        alert('Favourite order applied!');
+    } else {
+        alert('No favourite order found!');
     }
-    
+}
 
-    buyNowButton.addEventListener('click', handleOrderFormSubmit);
+    buyNowButton.addEventListener('click', function() {
+    window.location.href = 'order.html';
+    });
     addToFavouritesButton.addEventListener('click', saveToFavourites);
     applyFavouritesButton.addEventListener('click', applyFavourites);
 
