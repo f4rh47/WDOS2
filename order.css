@@ -231,6 +231,26 @@ form {
     border-radius: 5px;
 }
 
+#orderTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#orderTable th, #orderTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#orderTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#totalPrice {
+    font-weight: bold;
+}
+
 button {
     padding: 10px 20px;
     background-color: #007bff;

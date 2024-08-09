@@ -29,7 +29,7 @@ form.addEventListener('submit', function(event) {
     // Calculate delivery date (7 days from today)
     const today = new Date();
     const deliveryDate = new Date();
-    deliveryDate.setDate(today.getDate() + 7);
+    deliveryDate.setDate(today.getDate() + 2);
 
     // Format the delivery date 
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
